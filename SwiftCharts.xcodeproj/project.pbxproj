@@ -577,7 +577,6 @@
 		06342AC21B8AAD7F001C9F5D /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				8A1CB7022406445400886EF8 /* New Group */,
 				06342AC51B8AAD7F001C9F5D /* AppDelegate.swift */,
 				06342AC71B8AAD7F001C9F5D /* MasterViewController.swift */,
 				06342AC91B8AAD7F001C9F5D /* DetailViewController.swift */,
@@ -787,13 +786,6 @@
 				EB9B7E6A1BB8A575001B89D4 /* StraightLinePathGenerator.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8A1CB7022406445400886EF8 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		EB093E5D1D213EFF001157BD /* Generator */ = {
