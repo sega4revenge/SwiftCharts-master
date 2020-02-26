@@ -68,17 +68,6 @@ open class ChartGuideLinesLayerAbstract<T: ChartGuideLinesLayerSettings>: ChartC
                 drawGuideline(context, p1: CGPoint(x: x1, y: y1), p2: CGPoint(x: x2, y: y2))
             }
         }
-        
-        if axis == .y || axis == .xAndY {
-            for yScreenLoc in yScreenLocs {
-                guard (xAxisLayer.low || yScreenLoc > xAxisLayer.frame.maxY) && (!xAxisLayer.low || yScreenLoc < xAxisLayer.frame.minY) else {continue}
-                let x1 = originScreenLoc.x
-                let y1 = yScreenLoc
-                let x2 = originScreenLoc.x + chart.containerFrame.width
-                let y2 = y1
-                drawGuideline(context, p1: CGPoint(x: x1, y: y1), p2: CGPoint(x: x2, y: y2))
-            }
-        }
     }
 }
 
@@ -137,16 +126,6 @@ open class ChartGuideLinesForValuesLayerAbstract<T: ChartGuideLinesLayerSettings
             let y1 = originScreenLoc.y
             let x2 = x1
             let y2 = originScreenLoc.y + chart.containerFrame.height
-            drawGuideline(context, p1: CGPoint(x: x1, y: y1), p2: CGPoint(x: x2, y: y2))
-
-        }
-        
-        for axisValue in axisValuesY {
-            let screenLoc = yAxis.screenLocForScalar(axisValue.scalar)
-            let x1 = originScreenLoc.x
-            let y1 = screenLoc
-            let x2 = originScreenLoc.x + chart.containerFrame.width
-            let y2 = y1
             drawGuideline(context, p1: CGPoint(x: x1, y: y1), p2: CGPoint(x: x2, y: y2))
 
         }
