@@ -28,7 +28,7 @@ open class ChartPointTextCircleView: UILabel {
         }
     }
     
-    public init(chartPoint: ChartPoint, center: CGPoint, diameter: CGFloat, cornerRadius: CGFloat, borderWidth: CGFloat, font: UIFont) {
+    public init(chartPoint: ChartPoint, center: CGPoint, diameter: CGFloat, cornerRadius: CGFloat, borderWidth: CGFloat, font: UIFont, backgroundColor: UIColor = .black, borderColor: UIColor = .black) {
         
         targetCenter = center
         
@@ -40,8 +40,8 @@ open class ChartPointTextCircleView: UILabel {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
         self.textAlignment = NSTextAlignment.center
-        self.layer.borderColor = UIColor(red: 8/255, green: 186/255, blue: 240/255, alpha: 1).cgColor
-        self.layer.backgroundColor = UIColor(red: 8/255, green: 186/255, blue: 240/255, alpha: 1).cgColor
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.backgroundColor = backgroundColor.cgColor
         
         isUserInteractionEnabled = true
         self.didMoveToWindow()
